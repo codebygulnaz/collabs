@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f3f4;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+/* Toolbar */
+.toolbar {
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar button,
+.toolbar select {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Editor */
+#editor {
+  margin: 20px auto;
+  width: 80%;
+  min-height: 400px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}

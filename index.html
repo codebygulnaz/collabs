@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docs Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h2>Docs Clone</h2>
+    <div>
+      <button onclick="saveDoc()">💾 Save</button>
+      <button onclick="loadDoc()">📂 Load</button>
+    </div>
+  </header>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button onclick="format('bold')"><b>B</b></button>
+    <button onclick="format('italic')"><i>I</i></button>
+    <button onclick="format('underline')"><u>U</u></button>
+
+    <select onchange="format('formatBlock', this.value)">
+      <option value="p">Normal</option>
+      <option value="h1">Heading 1</option>
+      <option value="h2">Heading 2</option>
+    </select>
+  </div>
+
+  <!-- Editor -->
+  <div id="editor" contenteditable="true">
+    Start typing your document...
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
