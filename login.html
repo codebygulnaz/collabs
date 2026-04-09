@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Docs Clone</title>
+  <link rel="stylesheet" href="login-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      
+      <!-- SECTION 1: LOGIN FORM -->
+      <div id="login-section">
+        <div class="login-header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Google_Docs_logo_%282014-2020%29.svg" alt="Logo" class="login-logo">
+          <h2>Sign in</h2>
+          <p>Use your Docs Clone Account</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <input type="text" id="username" required>
+            <label>Username or Email</label>
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="input-group">
+            <input type="password" id="password" required>
+            <label>Password</label>
+            <i class="fa-solid fa-lock"></i>
+          </div>
+
+          <div id="errorMessage" class="error-msg"></div>
+
+          <div class="login-footer">
+            <a href="#" class="forgot-link" id="forgotPasswordBtn">Forgot password?</a>
+            <button type="submit" id="loginBtn">
+              <span class="btn-text">Sign in</span>
+              <div id="loader" class="spinner"></div>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- SECTION 2: RECOVERY OPTIONS -->
+      <div id="recovery-section" style="display: none;">
+        <div class="login-header">
+          <h2>Account Recovery</h2>
+          <p>How would you like to reset your password?</p>
+        </div>
+
+        <div class="recovery-options">
+          <button class="option-btn" onclick="showRecoveryInput('email')">
+            <i class="fa-solid fa-envelope"></i> Use Gmail/Email
+          </button>
+          <button class="option-btn" onclick="showRecoveryInput('phone')">
+            <i class="fa-solid fa-phone"></i> Use Phone Number
+          </button>
+        </div>
+
+        <div id="recovery-input-container" style="display: none; margin-top: 20px;">
+          <div class="input-group">
+            <input type="text" id="recovery-detail" required>
+            <label id="recovery-label">Enter your Email</label>
+            <i id="recovery-icon" class="fa-solid fa-envelope"></i>
+          </div>
+          <button class="login-btn" id="sendCodeBtn" onclick="sendRecoveryCode()">Send Reset Code</button>
+        </div>
+
+        <div class="login-footer">
+          <a href="#" class="forgot-link" id="backToLogin">← Back to Sign in</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
