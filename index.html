@@ -136,20 +136,8 @@
                 <div class="tool-group">
                     <input type="color" onchange="format('foreColor', this.value)">
                     <button onclick="downloadDoc()"><i class="fa-solid fa-download"></i></button>
+                </diV>
                 </div>
-                <!-- Zoom Option -->
-                <div class="tool-group">
-                    <label style="font-size: 12px; color: gray; margin-right: 5px;">Zoom:</label>
-                    <select id="zoom-select" onchange="changeZoom(this.value)">
-                        <option value="0.5">50%</option>
-                        <option value="0.75">75%</option>
-                        <option value="1" selected>100%</option>
-                        <option value="1.25">125%</option>
-                        <option value="1.5">150%</option>
-                        <option value="2">200%</option>
-                    </select>
-                </div>
-            </div>
 
             <!-- Editor Area -->
             <main class="editor-container">
@@ -157,8 +145,17 @@
                     Start typing your document here...
                 </div>
             </main>
-        </div>
-    </div> <!-- MAIN WRAPPER ENDS HERE -->
+            <!-- Add this line -->
+<div class="status-bar">
+    <div id="word-count-bar" class="status-item">Words: 0 | Characters: 0</div>
+    
+    <div class="zoom-controls">
+        <span id="zoom-percent">100%</span>
+        <input type="range" id="zoom-slider" min="50" max="200" value="100" oninput="changeZoom(this.value)">
+    </div>
+</div>
+
+
 
     <script src="script.js"></script>
 </body>
